@@ -1,0 +1,5 @@
+<% provide(:title, "Edit #{@kitten.name}") %>
+<% provide(:needed_url, kitten_path) %>
+<%= render 'form' %>
+<%= link_to 'Delete kitten', @kitten, method: :delete,
+														 data: { confirm: 'Are you sure?' } %>

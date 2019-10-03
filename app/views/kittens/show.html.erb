@@ -1,0 +1,15 @@
+<% provide(:title, @kitten.name) %>
+<h2>Presenting, <%= @kitten.name %> the kitten.</h2>
+<ul>
+  <li>Name: <%= @kitten.name %></li>
+	<li>Age: <%= @kitten.age %></li>
+	<li>Cuteness: <%= @kitten.cuteness %></li>
+	<li>Softness: <%= @kitten.softness %></li>
+</ul>
+<%= link_to 'edit', edit_kitten_path(params[:id]) %>
+<%= link_to 'delete', @kitten, method: :delete,
+														data: { confirm:
+														"Do you really want to get rid of #{@kitten.name}??"
+														 } %>																
+
+

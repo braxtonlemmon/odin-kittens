@@ -1,0 +1,12 @@
+<% provide(:title, 'Odin Kittens') %>
+<h2>All The Kittens</h2>
+<ul>
+  <% @kittens.each do |kitten| %>
+	  <li>
+			<%= link_to kitten.name, kitten %>
+			<%= link_to 'delete', kitten, method: :delete,
+																		data: { confirm: 'You sure?' } %>
+		</li>
+	<% end %>
+</ul>
+<%= link_to 'New kitten', new_kitten_path %>
